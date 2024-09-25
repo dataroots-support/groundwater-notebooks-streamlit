@@ -81,15 +81,21 @@ def plot_catchment(Q, K, i, b, x_scale, y_scale, x_point, y_point):
     st.write("y_max: %5.2f" % ymax)
     st.write('x_0:  %5.2f' % x0)
 
-# Hydraulic conductivity (K) as a normal input field
-K = st.number_input('Hydraulic conductivity (K)', value=457.5 / 86400, format="%.6e", key="K_input")
+# Hydraulic conductivity (K) as a normal input field, formatted with two digits in scientific notation
+K = st.number_input('Hydraulic conductivity (K)', value=457.5 / 86400, format="%.2e", key="K_input")
+
+# Abstraction rate (Q) with three decimal places
+Q = st.number_input('Abstraction rate (Q)', value=4320 / 86400, format="%.3f", key="Q_input")
 
 # Other input fields as number inputs
-Q = st.number_input('Abstraction rate (Q)', value=4320 / 86400, format="%.6f", key="Q_input")
 i = st.number_input('Regional gradient (i)', value=0.003, step=0.001, format="%.3f", key="i_input")  # Three decimal places
 b = st.number_input('Aquifer thickness (b)', value=23, key="b_input")
-x_scale = st.slider('X Scale', min_value=0.1, max_value=10.0, value=0.3, step=0.1, key="x_scale_slider")
-y_scale = st.slider('Y Scale', min_value=0.1, max_value=10.0, value=0.3, step=0.1, key="y_scale_slider")
+
+# X and Y scale as normal number inputs with two decimal places, no scientific notation
+x_scale = st.number_input('X Scale', min_value=0.1, max_value=10.0, value=0.3, step=0.1, format="%.2f", key="x_scale_input")
+y_scale = st.number_input('Y Scale', min_value=0.1, max_value=10.0, value=0.3, step=0.1, format="%.2f", key="y_scale_input")
+
+# Point coordinates
 x_point = st.number_input('X point', value=0, key="x_point_input")
 y_point = st.number_input('Y point', value=0, key="y_point_input")
 
