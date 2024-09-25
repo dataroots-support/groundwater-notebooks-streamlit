@@ -6,14 +6,10 @@ import numpy as np
 st.markdown(
     """
     <style>
+    /* Light theme background and text colors */
     header {
         display: none !important;
     }
-    .block-container {
-        padding: 2rem 0 !important;
-    }
-    
-    /* Light theme background and text colors */
     body {
         background-color: white;
         color: black;
@@ -22,7 +18,8 @@ st.markdown(
         background-color: white;
     }
     .block-container {
-        padding: 0 !important;
+        padding: 2rem 0 !important;
+        max-width: 1200px;
     }
     /* Change the header color */
     .stMarkdown h1, h2, h3, h4, h5, h6 {
