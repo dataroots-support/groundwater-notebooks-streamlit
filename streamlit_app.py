@@ -2,6 +2,50 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
+# Injecting custom CSS
+st.markdown(
+    """
+    <style>
+    header {
+        display: none !important;
+    }
+    .block-container {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Light theme background and text colors */
+    body {
+        background-color: white;
+        color: black;
+    }
+    .stApp {
+        background-color: white;
+    }
+    .block-container {
+        padding: 0 !important;
+    }
+    /* Change the header color */
+    .stMarkdown h1, h2, h3, h4, h5, h6 {
+        color: black;
+    }
+    /* Style input fields, buttons, and widgets */
+    .stTextInput, .stNumberInput, .stSlider, .stButton {
+        color: black;
+        background-color: white;
+        border-color: black;
+    }
+    .stNumberInput input {
+        background-color: white;
+        color: black;
+    }
+    .stSlider .st-bx, .stSlider .st-slider, p {
+        color: black;
+    }
+    </style>
+    """, 
+    unsafe_allow_html=True
+)
+
 # Function for catchment width
 def ymax_conf(Q, K, i, b):
     return Q / (2. * K * i * b)
