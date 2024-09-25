@@ -1,19 +1,32 @@
-# :earth_americas: GDP dashboard template
+# Groundwater Jupyter Notebooks into Streamlit
 
-A simple Streamlit app showing the GDP of different countries in the world.
+A Streamlit app to run Groundwater tools created in Jupyter Notebook
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gdp-dashboard-template.streamlit.app/)
+Jupyter Notebook: https://github.com/gw-inux/Jupyter-Notebooks/
 
 ### How to run it on your own machine
 
-1. Install the requirements
+1. Install Python (if not already installed)
 
    ```
-   $ pip install -r requirements.txt
+   $ python3 -m venv path/to/venv
    ```
 
-2. Run the app
+2. Create a Virtual Environment
+
+   ```
+   $ python3 -m venv path/to/venv
+   ```
+
+3. Activate the Virtual Environment
+
+   ```
+   $ source path/to/venv/bin/activate
+   ```
+
+4. Run the streamlit app
 
    ```
    $ streamlit run streamlit_app.py
+
    ```
