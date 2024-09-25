@@ -18,7 +18,7 @@ st.markdown(
         background-color: white;
     }
     .block-container {
-        padding: 2rem 0 !important;
+        padding: 2rem !important;
         max-width: 1200px;
     }
     /* Change the header color */
