@@ -29,6 +29,8 @@ st.markdown(
         color: black;
     }
     /* Style input fields, buttons, and widgets */
+    input[type="number"], input[type="text"],
+    .stNumberInput > div, .stTextInput > div,
     .stTextInput, .stNumberInput, .stSlider, .stButton {
         color: black;
         background-color: white;
