@@ -71,7 +71,7 @@ def plot_catchment(Q, K, i, b, x_scale, y_scale, x_point, y_point):
     ax.plot(x, y, label='Stream divide')
     plt.plot(x_point, y_point, marker='o', color='r', linestyle='None', label='Marked point')
     ax.set(xlabel='x (m)', ylabel='y (m)', title='Catchment area of a pumping well')
-    ax.set(xlim=(-x_plot, 10 * x_plot), ylim=(-y_plot, y_plot))
+    ax.set(xlim=(10*x_plot,-x_plot,), ylim=(-y_plot, y_plot))
     plt.fill_between(x, y, color='blue', alpha=.1)
     plt.fill_between(x, -y, color='blue', alpha=.1)
     ax.grid()
