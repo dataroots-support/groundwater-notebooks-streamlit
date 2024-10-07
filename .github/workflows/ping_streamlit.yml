@@ -4,6 +4,7 @@ on:
   schedule:
     # Run the job every 5 days
     - cron: '0 0 */5 * *'
+  workflow_dispatch: # Allows for manual trigger
 
 jobs:
   ping_app:
