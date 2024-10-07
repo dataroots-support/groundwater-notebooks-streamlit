@@ -1,0 +1,13 @@
+name: Ping Streamlit App
+
+on:
+  schedule:
+    # Run the job every 5 days
+    - cron: '0 0 */5 * *'
+
+jobs:
+  ping_app:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send GET request to Streamlit app
+      run: curl -X GET https://groundwater-notebooks.streamlit.app/
